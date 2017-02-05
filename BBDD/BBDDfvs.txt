@@ -1,0 +1,64 @@
+CREATE DATABASE vidaSostenible;
+USE vidaSostenible;
+
+
+CREATE TABLE categorias
+	(id_categoria int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	categoria varchar(45) NOT NULL
+	);
+
+
+CREATE TABLE preguntas
+	(id_pregunta int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	texto_pregunta varchar(200) NOT NULL,
+	categoria int(45) NOT NULL,
+	CONSTRAINT fk_categoria FOREIGN KEY (categoria) REFERENCES categorias(id_categoria)
+	);
+
+
+CREATE TABLE respuestas
+	(id_respuesta int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	texto_respuesta varchar(200) NOT NULL,
+	id_pregunta int(45) NOT NULL,
+	valor int(45) NOT NULL,
+	CONSTRAINT fk_pregunta FOREIGN KEY (id_pregunta) REFERENCES preguntas(id_pregunta)
+	);
+
+
+CREATE TABLE usuarioRespuestas
+	(id_usuario int(45) NOT NULL,
+	id_respuestaUsuario int(45) NOT NULL,
+	CONSTRAINT fk_respuesta FOREIGN KEY (id_respuestaUsuario) REFERENCES respuestas(id_respuesta),
+	PRIMARY KEY(id_usuario, id_respuestaUsuario)
+	);
+
+
+
+
+INSERT INTO 'categorias' VALUES
+(1, 'General'),
+(2, 'Energia'),
+(3, 'Transporte'),
+(4, 'Materia'),
+(5, 'Agua');
+
+INSERT INTO 'preguntas' VALUES
+(1, '¿Qué edad tienes?',1),
+(2, '¿Cuántos elementos de calefacción tienes en casa? (cuenta todos los radiadores, estufas, etc,…)',2),
+(3, '¿Tienes dobles ventanas o ventanas con doble cristal?',2),
+(4, '¿Qué vehículos usas por lo general para tus desplazamientos?',3),
+(5, '¿Vas solo en tu coche?',3);
+
+INSERT INTO 'preguntas' VALUES
+(1, 'Menos de 16 años',1,0),
+(2, 'Entre 17 y 36',1,0),
+(3, 'Entre 37 y 56',1,0),
+(4, 'Entre 57 y 76',1,0),
+(5, 'Más de 76',1,0),
+(6, 'No tengo ninguno',2,0),
+(6, 'Tengo alguna estufa o calefactor móvil',2,2),
+(6, 'Tengo un sistema de calefacción con radiadores fijos.',2,0);
+
+INSERT INTO 'usuarioRespuestas' VALUES
+(1, 1),
+(1,6);
