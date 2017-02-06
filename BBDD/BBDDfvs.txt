@@ -78,3 +78,11 @@ ID RESPUESTA MADRID
 SELECT usuarioRespuestas.id_usuario FROM respuestas
 JOIN usuarioRespuestas ON id_respuestaUsuario=id_respuesta
 WHERE texto_respuesta="Madrid"
+
+CATEGORIA DE CADA RESPUESTA
+SELECT *
+FROM usuarioRespuestas
+JOIN respuestas on respuestas.id_respuesta = usuarioRespuestas.id_respuestaUsuario
+JOIN preguntas ON preguntas.id_pregunta = respuestas.id_pregunta
+JOIN categorias ON categorias.id_categoria = preguntas.categoria
+where id_usuario=1
