@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS vidaSostenible;
+
 CREATE DATABASE vidaSostenible;
 USE vidaSostenible;
 
@@ -35,30 +37,30 @@ CREATE TABLE usuarioRespuestas
 
 
 
-INSERT INTO 'categorias' VALUES
+INSERT INTO categorias VALUES
 (1, 'General'),
 (2, 'Energia'),
 (3, 'Transporte'),
 (4, 'Materia'),
 (5, 'Agua');
 
-INSERT INTO 'preguntas' VALUES
+INSERT INTO preguntas VALUES
 (1, '¿Qué edad tienes?',1),
 (2, '¿Cuántos elementos de calefacción tienes en casa? (cuenta todos los radiadores, estufas, etc,…)',2),
 (3, '¿Tienes dobles ventanas o ventanas con doble cristal?',2),
 (4, '¿Qué vehículos usas por lo general para tus desplazamientos?',3),
 (5, '¿Vas solo en tu coche?',3);
 
-INSERT INTO 'preguntas' VALUES
+INSERT INTO respuestas VALUES
 (1, 'Menos de 16 años',1,0),
 (2, 'Entre 17 y 36',1,0),
 (3, 'Entre 37 y 56',1,0),
 (4, 'Entre 57 y 76',1,0),
 (5, 'Más de 76',1,0),
-(6, 'No tengo ninguno',2,0),
-(6, 'Tengo alguna estufa o calefactor móvil',2,2),
-(6, 'Tengo un sistema de calefacción con radiadores fijos.',2,0);
+(6, 'No tengo ninguno',2,1),
+(7, 'Tengo alguna estufa o calefactor móvil',2,2),
+(8, 'Tengo un sistema de calefacción con radiadores fijos.',3,3);
 
-INSERT INTO 'usuarioRespuestas' VALUES
+INSERT INTO usuarioRespuestas VALUES
 (1, 1),
 (1,6);
