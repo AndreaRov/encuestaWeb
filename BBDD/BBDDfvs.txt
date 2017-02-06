@@ -64,3 +64,17 @@ INSERT INTO respuestas VALUES
 INSERT INTO usuarioRespuestas VALUES
 (1, 1),
 (1,6);
+
+SUMA TOTAL HUELLA
+SELECT SUM(valor) FROM respuestas
+JOIN usuarioRespuestas ON id_respuestaUsuario=id_respuesta
+
+SUMA TOTAL HUELLA POR USUARIO
+SELECT SUM(valor) FROM respuestas
+JOIN usuarioRespuestas ON id_respuestaUsuario=id_respuesta
+WHERE id_usuario=2
+
+ID RESPUESTA MADRID
+SELECT usuarioRespuestas.id_usuario FROM respuestas
+JOIN usuarioRespuestas ON id_respuestaUsuario=id_respuesta
+WHERE texto_respuesta="Madrid"
