@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-05-2017 a las 11:14:18
+-- Tiempo de generación: 24-05-2017 a las 13:42:33
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -121,103 +121,115 @@ CREATE TABLE `depende` (
 --
 
 INSERT INTO `depende` (`id`, `idPregunta`, `idRespuesta`, `valorRespuesta`, `idTexto`) VALUES
-(1, 1, 1, 0, NULL),
-(2, 1, 2, 2, NULL),
+(1, 1, 1, 0, 12),
+(2, 1, 2, 2, 13),
 (3, 1, 3, 0, NULL),
-(4, 2, 4, 5, NULL),
-(5, 2, 5, 7, NULL),
-(6, 3, 6, 1, NULL),
-(7, 3, 7, 2, NULL),
-(8, 3, 8, 3, NULL),
+(4, 2, 4, 5, 14),
+(5, 2, 5, 7, 15),
+(6, 3, 6, 1, 16),
+(7, 3, 7, 2, 16),
+(8, 3, 8, 3, 16),
 (9, 4, 9, 0, NULL),
 (10, 4, 10, 0, NULL),
 (11, 4, 11, 0, NULL),
 (12, 4, 12, 0, NULL),
-(13, 4, 13, 0, NULL),
-(14, 4, 14, 0, NULL),
-(15, 4, 15, 0, NULL),
-(16, 4, 16, 0, NULL),
-(17, 4, 17, 0, NULL),
+(13, 4, 13, 0, 17),
+(14, 4, 14, 0, 17),
+(15, 4, 15, 0, 17),
+(16, 4, 16, 0, 17),
+(17, 4, 17, 0, 17),
 (18, 4, 18, 0, NULL),
 (19, 4, 19, 0, NULL),
 (20, 4, 20, 0, NULL),
-(21, 5, 21, 9, NULL),
-(22, 5, 22, 0, NULL),
-(23, 6, 9, 0, NULL),
-(24, 6, 10, 0, NULL),
-(25, 6, 11, 0, NULL),
-(26, 6, 12, 0, NULL),
-(27, 6, 13, 0, NULL),
+(21, 5, 21, 9, 19),
+(22, 5, 22, 0, 18),
+(23, 6, 9, 0, 65),
+(24, 6, 10, 0, 65),
+(25, 6, 11, 0, 65),
+(26, 6, 12, 0, 65),
+(27, 6, 13, 0, 65),
 (28, 6, 14, 0, NULL),
 (29, 6, 15, 0, NULL),
 (30, 6, 16, 0, NULL),
 (31, 6, 17, 0, NULL),
-(32, 6, 18, 0, NULL),
-(33, 6, 19, 0, NULL),
-(34, 6, 20, 0, NULL),
-(35, 7, 23, 3, NULL),
-(36, 7, 24, 1, NULL),
-(37, 7, 25, 1, NULL),
-(38, 7, 26, 1, NULL),
-(39, 7, 27, -2, NULL),
-(40, 8, 21, -2, NULL),
-(41, 8, 22, 2, NULL),
-(42, 9, 21, -1, NULL),
-(43, 9, 22, 1, NULL),
-(44, 9, 28, 1, NULL),
-(45, 10, 29, 6, NULL),
-(46, 10, 30, 3, NULL),
-(47, 10, 31, 1, NULL),
-(48, 10, 32, 1, NULL),
-(49, 10, 33, 0, NULL),
-(50, 10, 34, 0, NULL),
+(32, 6, 18, 0, 65),
+(33, 6, 19, 0, 65),
+(34, 6, 20, 0, 65),
+(35, 7, 23, 3, 21),
+(36, 7, 24, 1, 21),
+(37, 7, 25, 1, 22),
+(38, 7, 26, 1, 23),
+(39, 7, 27, -2, 23),
+(40, 8, 21, -2, 24),
+(41, 8, 22, 2, 25),
+(42, 9, 21, -1, 26),
+(43, 9, 22, 1, 27),
+(44, 9, 28, 1, 27),
+(45, 10, 29, 6, 28),
+(46, 10, 30, 3, 29),
+(47, 10, 31, 1, 30),
+(48, 10, 32, 1, 31),
+(49, 10, 33, 0, 32),
+(50, 10, 34, 0, 30),
 (51, 11, 35, 0, NULL),
 (52, 11, 36, 1, NULL),
 (53, 11, 37, 2, NULL),
 (54, 11, 38, 3, NULL),
-(55, 12, 23, 2, NULL),
-(56, 12, 24, 4, NULL),
-(57, 12, 25, 4, NULL),
-(58, 12, 26, 4, NULL),
-(59, 12, 27, 8, NULL),
-(60, 13, 39, -3, NULL),
-(61, 14, 40, 2, NULL),
-(62, 15, 23, 3, NULL),
-(63, 15, 24, 1, NULL),
-(64, 15, 25, 1, NULL),
-(65, 15, 26, 1, NULL),
-(66, 15, 27, -1, NULL),
-(67, 16, 23, -1, NULL),
-(68, 16, 24, 1, NULL),
-(69, 16, 25, 1, NULL),
-(70, 16, 26, 1, NULL),
-(71, 16, 27, 3, NULL),
-(72, 17, 41, 0, NULL),
-(73, 17, 42, 1, NULL),
-(74, 17, 43, 7, NULL),
-(75, 17, 44, 10, NULL),
-(76, 17, 45, 15, NULL),
+(55, 12, 23, 2, 34),
+(56, 12, 24, 4, 34),
+(57, 12, 25, 4, 35),
+(58, 12, 26, 4, 36),
+(59, 12, 27, 8, 36),
+(60, 13, 39, -3, 37),
+(61, 14, 40, 2, 38),
+(62, 15, 23, 3, 39),
+(63, 15, 24, 1, 40),
+(64, 15, 25, 1, 40),
+(65, 15, 26, 1, 40),
+(66, 15, 27, -1, 41),
+(67, 16, 23, -1, 42),
+(68, 16, 24, 1, 43),
+(69, 16, 25, 1, 43),
+(70, 16, 26, 1, 43),
+(71, 16, 27, 3, 44),
+(72, 17, 41, 0, 45),
+(73, 17, 42, 1, 46),
+(74, 17, 43, 7, 46),
+(75, 17, 44, 10, 46),
+(76, 17, 45, 15, 47),
 (77, 18, 21, -5, NULL),
-(78, 18, 22, 7, NULL),
-(79, 19, 46, 3, NULL),
-(80, 19, 47, 1, NULL),
-(81, 19, 48, -2, NULL),
-(82, 20, 21, 1, NULL),
-(83, 20, 22, 3, NULL),
-(84, 20, 49, 2, NULL),
-(85, 21, 23, 9, NULL),
-(86, 21, 24, 5, NULL),
-(87, 21, 25, 5, NULL),
-(88, 21, 26, 5, NULL),
-(89, 21, 27, 2, NULL),
-(90, 22, 50, 7, NULL),
-(91, 22, 51, 3, NULL),
-(92, 22, 52, 1, NULL),
-(93, 23, 23, 2, NULL),
-(94, 23, 24, 4, NULL),
-(95, 23, 25, 4, NULL),
-(96, 23, 26, 4, NULL),
-(97, 23, 27, 6, NULL);
+(78, 18, 22, 7, 48),
+(79, 19, 46, 3, 49),
+(80, 19, 47, 1, 49),
+(81, 19, 48, -2, 50),
+(82, 20, 21, 1, 51),
+(83, 20, 22, 3, 52),
+(84, 20, 49, 2, 53),
+(85, 21, 23, 9, 54),
+(86, 21, 24, 5, 55),
+(87, 21, 25, 5, 55),
+(88, 21, 26, 5, 55),
+(89, 21, 27, 2, 56),
+(90, 22, 50, 7, 57),
+(91, 22, 51, 3, 58),
+(92, 22, 52, 1, 59),
+(93, 23, 23, 2, 60),
+(94, 23, 24, 4, 61),
+(95, 23, 25, 4, 61),
+(96, 23, 26, 4, 61),
+(97, 23, 27, 6, 62);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `dependencia`
+--
+
+CREATE TABLE `dependencia` (
+  `id` int(11) NOT NULL,
+  `idDepende` int(11) NOT NULL,
+  `idPregunta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -596,27 +608,27 @@ CREATE TABLE `persona` (
   `pais` int(11) NOT NULL,
   `ccaa` int(11) NOT NULL,
   `edad` int(11) NOT NULL,
-  `sexo` enum('femenino','masculino','','') DEFAULT NULL,
   `tipoCasa` int(11) NOT NULL,
   `m2Casa` int(11) NOT NULL,
   `numPersonas` int(11) NOT NULL,
   `ingresos` int(11) NOT NULL,
   `conocimiento` int(11) NOT NULL,
-  `estudios` int(11) NOT NULL
+  `estudios` int(11) NOT NULL,
+  `sexo` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `sexo`, `tipoCasa`, `m2Casa`, `numPersonas`, `ingresos`, `conocimiento`, `estudios`) VALUES
-(1, 73, 13, 4, 'masculino', 3, 1, 2, 2, 5, 3),
-(2, 73, 15, 4, 'masculino', 1, 2, 1, 2, 5, 2),
-(3, 73, 13, 2, 'femenino', 2, 2, 3, 5, 2, 4),
-(4, 73, 9, 2, 'femenino', 2, 2, 4, 5, 2, 3),
-(5, 73, 15, 4, 'femenino', 1, 3, 4, 5, 2, 2),
-(6, 73, 12, 5, 'femenino', 1, 2, 2, 2, 5, 1),
-(7, 73, 5, 3, 'femenino', 1, 1, 2, 3, 3, 4);
+INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `tipoCasa`, `m2Casa`, `numPersonas`, `ingresos`, `conocimiento`, `estudios`, `sexo`) VALUES
+(1, 73, 13, 4, 3, 1, 2, 2, 5, 3, 'masculino'),
+(2, 73, 15, 4, 1, 2, 1, 2, 5, 2, 'masculino'),
+(3, 73, 13, 2, 2, 2, 3, 5, 2, 4, 'femenino'),
+(4, 73, 9, 2, 2, 2, 4, 5, 2, 3, 'femenino'),
+(5, 73, 15, 4, 1, 3, 4, 5, 2, 2, 'femenino'),
+(6, 73, 12, 5, 1, 2, 2, 2, 5, 1, 'femenino'),
+(7, 73, 5, 3, 1, 1, 2, 3, 3, 4, 'femenino');
 
 -- --------------------------------------------------------
 
@@ -943,6 +955,74 @@ CREATE TABLE `textoInformativo` (
   `texto` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `textoInformativo`
+--
+
+INSERT INTO `textoInformativo` (`id`, `texto`) VALUES
+(1, 'La huella ecológica a lo largo de la edad parece tener forma de campana, siendo máxima en la edad adulta y disminuyendo hacia atrás, cuando somos preadultos, y hacia adelante, cuando somos ancianos. ¡Descontando la impresionante huella ecológica de los niños en su primer año de vida, solamente en pañales de usar y tirar!'),
+(2, 'Al vivir en una vivienda aislada, tu huella ecológica tiende a ser mayor. Necesitarás más energía para calentar la casa en comparación con un piso rodeado de otras viviendas, por ejemplo. También es probable que consumas más agua y que gastes más en transporte para ir y venir de tu casa. \r\nPero también hay una parte positiva: al disponer de abundante espacio, puedes reducir tu huella ecológica drásticamente instalando paneles solares en el tejado, un sistema para acopiar el agua, un compostador para reciclar los restos de alimentos… y muchas otras cosas.'),
+(3, 'Los adosados suelen ser mayores que los pisos, por lo que su huella ecológica también suele ser mayor. Por ejemplo, gastan más energía en calentar la casa. Pero también ofrecen la posibilidad de reducir drásticamente tu huella ecológica instalando un sistema de energía renovable (agua caliente solar, por ejemplo) en el tejado, un compostador en el jardín, etc.'),
+(4, 'Disponer de servicios comunes de agua y energía reduce mucho la huella ecológica de las viviendas dentro de un bloque de pisos. No obstante, las necesidades de energía variarán mucho según cuál sea la posición del piso en el edificio y su orientación. Por ejemplo, no es lo mismo un bajo orientado al norte que un último piso o un ático orientado al sur, que garantiza una fuerte insolación y tal vez problemas para mantener la casa fresca en verano.'),
+(5, 'Un piso dentro de una manzana de casas suele tener un consumo más reducido de energía para climatización, aunque eso varía mucho con la localización de la vivienda, si es exterior o interior, en un piso alto o bajo, y su orientación. Los edificios antiguos de muros gruesos ofrecen un buen aislamiento, lo que reduce las necesidades de calefacción.'),
+(6, 'Vivir solo es una opción que cada vez más personas adoptan, independientemente de los motivos. Ten en cuenta que en esta caso el tamaño de tu huella ecológica se multiplica, y eso sucede en todos los aspectos: consumo de energía, agua, transporte, consumo de alimentos, producción de residuos, etc. Pero hay un lado positivo: vivir solo te permite organizarte al detalle, para reducir tu huella de la manera en que tú exactamente determines.'),
+(7, 'Estás próximo al tamaño medio de los hogares en España, que es de 2,5 personas. Eso implica que será fácil poneros de acuerdo para reducir el tamaño de vuestra huella ecológica.'),
+(8, 'Las viviendas habitadas por muchas personas suelen producir resultados de huella ecológica por persona reducidos, al compartir los recursos de energía, agua, alimentos, etc. Por ejemplo, permiten una compra de alimentos basada en productos frescos y en la adquisición de cantidades elevadas, lo que reduce el desperdicio y la producción de residuos. Pero eso depende mucho de las costumbres de las personas que habitan la casa.'),
+(9, 'Las viviendas pequeñas tienen ventajas: son más fáciles de climatizar y de limpiar con un consumo reducido de agua y energía, por ejemplo.'),
+(10, 'Una proporción muy elevada de personas en nuestro país viven en pisos de alrededor de 80 metros cuadrados (aunque el tamaño medio de la vivienda es mayor, de unos 140 m2, pero eso incluye viviendas rurales). El consumo de energía y agua dependerá mucho del equipamiento de la vivienda (por ejemplo si tiene o carece de aislamiento) y de las costumbres de sus moradores.'),
+(11, 'Las casas grandes, como la tuya, pueden ser grandes sumideros de energía. Por ejemplo, si necesitan más de siete u ocho radiadores de calefacción. Es una buena oportunidad para revisar si están colocados los termostatos necesarios, si paredes y techos están bien aislados, etc.'),
+(12, 'A no ser que vivas en una zona extremadamente cálida (las Islas Canarias) la carencia de cualquier sistema de calefacción indica un serio problema de pobreza energética. La pobreza energética es una lacra de nuestra sociedad que debe ser combatida. Aquí tienes ideas para encontrar soluciones, para tí o para otras personas.'),
+(13, 'En climas suaves (Costas del sur y Levante y las islas) uno o dos elementos móviles de calefacción bien usados pueden ser suficientes. En climas más duros, esa escasez de elementos calefactores puede indicar un problema de pobreza energética. La pobreza energética es una lacra de nuestra sociedad que debe ser combatida. Aquí tienes ideas para encontrar soluciones, para tí o para otras personas.'),
+(14, 'Un sistema de calefacción central implica una huella ecológica reducida con un buen nivel de confort. Cuanto mayor sea el sistema (algunos abarcan barrios enteros) mayor será su eficiencia y el ahorro por cada vivienda servida.'),
+(15, 'Un sistema de calefacción individual te permite un control absoluto del gasto. Podrás ahorrar mucho dinero y energía si mejoras el aislamiento de tu vivienda.'),
+(16, 'Recuerda que es obligatoria la instalación de repartidores de gastos de calefacción en todos los radiadores de las viviendas con calefacción central. Consisten en termostatos y reguladores que se añaden a los radiadores ya existentes (lo que puede no ser fácil en modelos viejos). Eso implica que pagarás el calor que consumas de verdad, no una estimación a prorrateo.'),
+(17, 'La temporada oficial de encendido de calefacciones la fijan los ayuntamientos, y suele ir de octubre a abril. O vives en una zona de alta montaña extremadamente fría, o eres realmente friolero…'),
+(18, 'Existen infinidad de soluciones para refrigerar nuestra casa en los meses de canícula sin necesidad de gastar dinero en una costosa instalación de aire acondicionado. Refrescar la casa al amanecer, evitar la entrada del sol, usar ventiladores y evaporadores, son algunas de ellas.'),
+(19, 'El aire acondicionado de compresor puede ser una necesidad en determinadas situaciones, pero debería ser usado con parsimonia. Hay muchas soluciones para refrescar nuestra casa mucho más baratas y muy eficaces. NOTA: no instales el compresor del aire acondicionado en el patio de ventilación de tu edificio. Debe ser instalado en la azotea o el tejado. ¡No conviertas la vida de tus vecinos en una cálida y ruidosa pesadilla!'),
+(21, 'En esto del clima, te gusta ir a contracorriente. Lo malo es que estás tirando el dinero, derrochando energía y contribuyendo directamente al calentamiento global. Y también hinchando desmesuradamente el tamaño de tu huella ecológica.'),
+(22, '¿Sabías que puedes reducir sustancialmente tu factura de calefacción y aire acondicionado con acciones sencillas, muchas de ellas sin coste?'),
+(23, 'Tu habilidoso comportamiento con la climatización contribuye a reducir tu huella ecológica y también te hace ahorrar mucho dinero. '),
+(24, 'Si no lo has hecho todavía, es el momento de mejorar el aislamiento de tu casa. Dispones de soluciones adaptadas a todas las necesidades y para todos los bolsillos.'),
+(25, 'Las ventanas de tu casa son sumideros por donde se escapa la energía que tan cara te cuesta. Pero tranquilo, que hay soluciones. Si no puedes llegar a instalar dobles ventanas o dobles cristales, un poco de bricolaje impedirá las peores fugas.'),
+(26, 'Cuantas más “Aes” y más “+” tengan tus aparatos, menor será tu huella energética. Eso sin contar el ahorro de dinero en la factura de la luz.'),
+(27, 'Si ninguno de tus electromésticos tiene etiqueta energética clase A, comienza por el frigorífico. Si no es clase “A” o no tiene etiqueta energética de ninguna clase, lo más seguro es que sea un modelo antiguo que está derrochando energía las 24 horas del día. Si es de tamaño estándar te saldrá a cuenta cambiarlo por un modelo clase A+++ y si es posible de tamaño menor. Lo amortizarás en cuatro o cinco años.'),
+(28, 'El coche de motor de combustión es la opción más cara y más contaminante que existe para el transporte. Investiga otras opciones si quieres reducir el tamaño de tu huella ecológica y mejorar la vida de tus vecinos (por ejemplo, dejando de envenenarles con los gases que salen del tubo de escapa de tu vehículo.'),
+(29, 'La moto (mejor si es pequeña y mejor todavía si es eléctrica) es una opción menos mala para el transporte: ocupa menos espacio y contamina menos. Recuerda: ¡Cuidado con el ruido!'),
+(30, 'Eres un pionero usando uno de los llamados VLUEs (Vehículo Ligero Urbano Eléctrico). Son una novedad, pero van a triunfar. Máxima movilidad con el mínimo peso y espacio ocupado.'),
+(31, 'Utilizas la mejor opción de transporte, la más barata y menos contaminante. Sácale todo el partido al transporte público: consulta su disponibilidad de horarios y servicios. Lo más sencillo es usar Google Maps, haz clic en el botón “Cómo llegar” y en el icono de transporte público.'),
+(32, 'Usando la bicicleta para tu movilidad cotidiana, ahorras mucho dinero, no molestas a nadie con ruido, humos y ocupación de la vía pública y además tu salud mejora notablemente. Sin duda, la bicicleta es el vehículo del futuro en la ciudad.'),
+(33, 'Caminar no es una excentricidad, es otra opción para la movilidad en las ciudades. Al igual que en el caso de la bicicleta, ahorras mucho dinero, ni molestas a nadie con ruido, humos y ocupación de la vía pública y además tu salud mejora notablemente. Y no necesitas comprar ningún vehículo: eres tú mismo.'),
+(34, 'No hagas mucho caso de la publicidad de coches ecológicos. El principal factor que determina el consumo del vehículo es el tamaño: coche pequeño, coche economizador y menos contaminador.'),
+(35, '¿Has pensado en pasarte a la movilidad eléctrica? Cada vez hay más modelos y a mejores precios.'),
+(36, 'Es evidente que para tí el coche no un mero medio de transporte, sino algo más. Te chiflan los SUV, los todocaminos, los motores de 400 cv y los cromados. Todo eso está muy bien, siempre que uses tu súpervehículo fuera de la ciudad.  Recuerda que tu huella ecológica se dispara si usas un cochazo para tu movimiento cotidiano.'),
+(37, 'Tu coche es eléctrico o híbrido. Enhorabuena, acabas de dar un gran paso para reducir tu huella ecológica.'),
+(38, 'Intenta usar tu viejo coche los menos posible, es una verdadera fábrica de contaminantes.'),
+(39, 'Te gusta ir solo en tu coche, disfrutando de la intimidad de tu salón privado con ruedas en mitad del atasco. Habría menos atascos si lo compartieras, por cierto. Ir solo en tu coche multiplica tu huella ecológica.'),
+(40, 'Compartes tu coche con regularidad, puedes hacerlo con más frecuencia y más seguridad utilizado estas apps.'),
+(41, 'Eres aficionado a compartir tu coche, ¿has pensado afiliarte a un sistema de coche compartido o “car sharing”?'),
+(42, 'Eres de los que disfrutan yendo a la compra a diario, seguramente conoces todas las tiendas de tu barrio. Es una manera estupenda de comprar, tiras menos comida porque acumulas menos y encuentras oportunidades en precio y calidad imposibles de descubrir de otra manera.'),
+(43, 'Ir a la compra con frecuencia y en tiendas próximas a tu domicilio estimula el comercio local y te permite ahorrar dinero y buscar las mejores calidades de los productos.'),
+(44, 'Tu pauta de ir a la compra es abrupta: una vez cada varias semanas, coges el coche, conduces hasta el centro comercial y llenas varios carritos hasta los topes. Tienes un arcón congelador de gran capacidad y un frigorífico de dos puertas, pero eso no evita que la posibilidad de que tengas que tirar comida sea mayor que si hicieras la compra con más frecuencia.'),
+(45, 'Una cosa es ahorrar agua, y otra no tener ni una triste planta en casa. Las plantas alegran la vista, purifican el aire y amortiguan la temperatura. Tener un par de macetas no cuesta nada y no ocupa sitio.'),
+(46, 'Como la mayoría de los seres humanos, disfrutas de las plantas, ya sea en algunas macetas o en un pequeño jardín. Recuerda que el consumo de agua de una casa está en relación directa con la cantidad de plantas que cuidas: practica el riego economizador.'),
+(47, 'Tienes un hermoso jardín, pero también un problema de derroche de agua si no has instalado ya un sistema de riego por goteo y algún temporizador. Infórmate aquí. Si de verdad tienes césped inglés y en tu región no llueve los bastante para mantenerlo fresco de manera natural, prueba a cubrir el terreno con plantas autóctonas.'),
+(48, 'Ya estás tardando para ir a tu proveedor de habitual de útiles de jardinería para contratar algún sistema de riego economizador, apropiado para el tamaño de tu vergel. Ahorrarás agua y algo de dinero, pero lo principal es que alejarás la amenaza de una posible sequía.'),
+(49, 'La ausencia de elementos economizadores de agua en la fontanería de tu casa te está haciendo perder dinero y lo peor de todo, derrochar inútilmente gran cantidad de agua potable valiosa.'),
+(50, 'Enhorabuena, parece que tienes controlada la fontanería de tu casa con la instalación de varios artilugios economizadores de agua. No olvides hacer un uso prudente del WC, el principal elemento de consumo de agua en una casa.'),
+(51, 'No te gustan las calaveras ni los peces muertos en las etiquetas de los productos de limpieza o bricolage que compras. Es una buena costumbre, porque todo lo que es tóxico para el medio ambiente también lo es para tí'),
+(52, 'No te preocupa demasiado la composición de los productos de limpieza y bricolaje que compras. Deberías reducir la adquisición de limpiadores y quitagrasas muy agresivos, insecticidas tóxicos, etc.'),
+(53, 'Si no te fijabas en los símbolos de productos peligrosos, aquí tienes los nueve usados oficialmente. Intenta evitar los productos que los lleven en su etiqueta.'),
+(54, 'Eres adicto a la carne, lo cual no es bueno para nadie. Resulta muy cara (es el principal gasto en comida, en España), no es bueno comerla en exceso y dispara tu huella ecológica. Producir carne es un importante contribuyente al calentamiento global.'),
+(55, 'Como la mayoría de la gente combinas la carne con las verduras para obtener una dieta sana. Reducir tu consumo de carne te permitirá comprarla de mejor calidad y reducir mucho tu huella ecológica. Utiliza las recetas tradicionales para hacer sabrosos guisos con una proporción de carne / vegetales adecuada (por ejemplo, 25% de carne y 75% de vegetales)'),
+(56, 'Tu opción, el veganismo, es la de cada vez más gente. Indudablemente es la que tiene una huella ecológica más reducida.'),
+(57, 'Sinceramente, te faltan algunas habilidades para ser un buen vecino. No te importa mezclar todos los residuos de tu casa en la misma bolsa y tirarla al contenedor más próximo (esperemos que no la dejes en la calle). Así multiplicas tu huella ecológica, al convertir una potencial colección de residuos separados valiosos (de plástico, vidrio, papel, etc.), en basura mezclada sin valor.'),
+(58, 'Algo sí separas, por ejemplo, el papel y cartón o el vidrio. No seas gumia y añade más contenedores de separación, hasta tener la colección completa: papel, vidrio, envases ligeros, materia orgánica y otros especiales (pilas, lámparas, etc.)'),
+(59, 'Enhorabuena, se te da bien eso de la separación doméstica de residuos. Aprende más trucos para separar mejor todavía aquí.'),
+(60, 'Tu hábito de comprar la comida fresca y sin envasar te permite ahorrar mucho dinero, producir muchos menos residuos y alimentarte de la manera más sana posible.'),
+(61, 'Combinas la compra de alimentos frescos con la de empaquetados, como hacemos todos. Podrás aumentar la proporción de productos frescos si te acostumbras a cocinar con más frecuencia. Ten cuidado que cocinar se puede convertir en un vicio adictivo.'),
+(62, 'Tu idea de una cena es colocar dentro del microondas algo que has sacado de una caja y esperar unos minutos. Lo malo es que esa costumbre sale muy cara, es muy insana y multiplica tu huella ecológica. Prueba a comprar algo fresco de vez en cuando y cómprate un recetario de cocina.'),
+(65, 'Eres un verdadero aficionado al aire acondicionado. Seguro que, cuando no hace mucho calor, puedes otras otras soluciones para refrigerar tu casa más baratas y de de huella ecológica mucho más reducida (ejemplo: un simple ventilador).');
+
 -- --------------------------------------------------------
 
 --
@@ -1019,6 +1099,14 @@ ALTER TABLE `depende`
   ADD KEY `fk_depende_textoinformativo` (`idTexto`);
 
 --
+-- Indices de la tabla `dependencia`
+--
+ALTER TABLE `dependencia`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_dependencia_idDepende` (`idDepende`),
+  ADD KEY `fk_dependencia_idPregunta` (`idPregunta`);
+
+--
 -- Indices de la tabla `edad`
 --
 ALTER TABLE `edad`
@@ -1086,7 +1174,7 @@ ALTER TABLE `pertenece`
 ALTER TABLE `pregunta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_pregunta_tipo` (`tipo`),
-  ADD KEY `fk_pregunta_depende` (`dependencia`);
+  ADD KEY `fk_pregunta_dependencia` (`dependencia`);
 
 --
 -- Indices de la tabla `responde`
@@ -1147,6 +1235,11 @@ ALTER TABLE `conocimientos`
 ALTER TABLE `depende`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 --
+-- AUTO_INCREMENT de la tabla `dependencia`
+--
+ALTER TABLE `dependencia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `edad`
 --
 ALTER TABLE `edad`
@@ -1205,7 +1298,7 @@ ALTER TABLE `respuesta`
 -- AUTO_INCREMENT de la tabla `textoInformativo`
 --
 ALTER TABLE `textoInformativo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT de la tabla `tipo`
 --
@@ -1233,6 +1326,13 @@ ALTER TABLE `depende`
   ADD CONSTRAINT `depende_pregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `depende_respuesta` FOREIGN KEY (`idRespuesta`) REFERENCES `respuesta` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_depende_textoinformativo` FOREIGN KEY (`idTexto`) REFERENCES `textoInformativo` (`id`);
+
+--
+-- Filtros para la tabla `dependencia`
+--
+ALTER TABLE `dependencia`
+  ADD CONSTRAINT `fk_dependencia_idDepende` FOREIGN KEY (`idDepende`) REFERENCES `depende` (`id`),
+  ADD CONSTRAINT `fk_dependencia_idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`);
 
 --
 -- Filtros para la tabla `edad`
@@ -1277,7 +1377,6 @@ ALTER TABLE `pertenece`
 -- Filtros para la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  ADD CONSTRAINT `fk_pregunta_depende` FOREIGN KEY (`dependencia`) REFERENCES `depende` (`id`),
   ADD CONSTRAINT `fk_pregunta_tipo` FOREIGN KEY (`tipo`) REFERENCES `tipo` (`id`);
 
 --
