@@ -66,7 +66,7 @@ function loadDoc() {
                 inputtValue.setAttribute("class", "textInput");
                 inputtValue.setAttribute("value", "");
             }
-            else {
+            else if(arr[i].Tipo == "checkbox"){
                 for (j = 0; j < arrRespuestas.length; j++) {
                     var labelRespuesta = document.createElement("label");
                     labelRespuesta.setAttribute("id", arrRespuestas[j].idLabel);
@@ -77,11 +77,27 @@ function loadDoc() {
                     div.appendChild(inputt);
                     inputt.setAttribute("id", arrRespuestas[j].idRespuesta);
                     inputt.setAttribute("type", arr[i].Tipo);
-                    inputt.setAttribute("name", arr[i].idPregunta);
+                    inputt.setAttribute("name", arrRespuestas[j].idRespuesta);
                     inputt.setAttribute("value", arrRespuestas[j].name);
                     inputt.setAttribute("onclick", arrRespuestas[j].evento);
                 }
-            }
+            }else if(arr[i].Tipo == "radio"){
+				for (j = 0; j < arrRespuestas.length; j++) {
+                    var labelRespuesta = document.createElement("label");
+                    labelRespuesta.setAttribute("id", arrRespuestas[j].idLabel);
+                    var textoRespuesta = document.createTextNode(arrRespuestas[j].respuesta);
+                    div.appendChild(labelRespuesta);
+                    labelRespuesta.appendChild(textoRespuesta);
+                    var inputt = document.createElement("input");
+                    div.appendChild(inputt);
+                    inputt.setAttribute("id", arrRespuestas[j].idRespuesta);
+                    inputt.setAttribute("type", arr[i].Tipo);
+                    inputt.setAttribute("name", arrRespuestas[j].idRespuesta);
+                    inputt.setAttribute("value", arrRespuestas[j].name);
+                    inputt.setAttribute("onclick", arrRespuestas[j].evento);
+                }
+			}else{
+			}
         }
     }
 }
@@ -107,8 +123,6 @@ function updateTextInput(val, id) {
     var claseTextInput = document.getElementById(idInputText);
     claseTextInput.value=respuesta;
 }
-
-
 
 function dameValor(pregunta,val){
     for (i = 0; i < myArr.length; i++) {
