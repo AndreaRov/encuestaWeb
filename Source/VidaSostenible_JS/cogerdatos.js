@@ -32,8 +32,7 @@ function loadDoc() {
                     var optionRespuesta = document.createElement("option");
                     div.appendChild(selectRespuesta);
                     selectRespuesta.appendChild(optionRespuesta);
-                    optionRespuesta.setAttribute("value", arrRespuestas[j].valor);
-                    optionRespuesta.setAttribute("name", arrRespuestas[j].name);
+                    optionRespuesta.setAttribute("value", arrRespuestas[j].name);
                     optionRespuesta.setAttribute("id", arrRespuestas[j].idRespuesta);
                     var textoRespuesta = document.createTextNode(arrRespuestas[j].respuesta);
                     optionRespuesta.appendChild(textoRespuesta);
@@ -67,7 +66,7 @@ function loadDoc() {
                 inputtValue.setAttribute("class", "textInput");
                 inputtValue.setAttribute("value", "");
             }
-            else {// radio y checkbox
+            else {
                 for (j = 0; j < arrRespuestas.length; j++) {
                     var labelRespuesta = document.createElement("label");
                     labelRespuesta.setAttribute("id", arrRespuestas[j].idLabel);
@@ -78,8 +77,8 @@ function loadDoc() {
                     div.appendChild(inputt);
                     inputt.setAttribute("id", arrRespuestas[j].idRespuesta);
                     inputt.setAttribute("type", arr[i].Tipo);
-                    inputt.setAttribute("name", arrRespuestas[j].name);
-                    inputt.setAttribute("value", arrRespuestas[j].value);
+                    inputt.setAttribute("name", arr[i].idPregunta);
+                    inputt.setAttribute("value", arrRespuestas[j].name);
                     inputt.setAttribute("onclick", arrRespuestas[j].evento);
                 }
             }
