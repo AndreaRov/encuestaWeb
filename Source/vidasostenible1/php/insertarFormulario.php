@@ -1,9 +1,5 @@
 <?php
-var_dump ($_REQUEST);
-
-
 include 'conexionBBDD.php';
-
 var_dump($_REQUEST);
 
 $paises = $_POST['paises'];
@@ -16,6 +12,7 @@ $ingresos = $_POST['ingresos'];
 $conocimientos = $_POST['conocimientos'];
 $estudios = $_POST['estudios'];
 $id = 0;
+$lastId;
 
 $queryPersonas = "INSERT INTO persona VALUES($id,$paises,$ccaa,$edad,$tipoCasa,$espacioCasas,$numPersonas,$ingresos,$conocimientos,$estudios)";
 
@@ -24,23 +21,31 @@ echo $queryPersonas;
 
 $result = $conn->query($queryPersonas);
 if(isset($result) && $result){
-echo "query correcta y hay resultado";
-     $lastId = $mysqli->insert_id;
-    
-    foreach ($array as $clave => $valor) {
-        // $array[3] se actualizará con cada valor de $array...
-        echo "{$clave} => {$valor} ";
-        print_r($array);
+    echo "query correcta y hay resultado";
+    $lastId = $conn->insert_id;
+    echo "<br>";
+    foreach ($_POST as $clave => $valor) {
+        if(is_numeric($clave)){
+            //echo "{$clave} => {$valor} ";
+            $queryRespuestas = "INSERT INTO responde VALUES($id,$lastId,$valor)";
+            $resultRes = $conn -> query($queryRespuestas);
+            if(isset($resultRes) && $resultRes){
+                echo "query correcta y hay resultado";
+                echo "<br>";
+                echo $lastId . "=>" . $clave;
+                echo "<br>";
+            }else{
+                echo $conn->error;
+            }
+
+        }
     }
-    
-    
-    
 }else{
-echo $conn->error;
+    echo $conn->error;
 }
 
-//$queryRespuestas = (INSERT INTO responde VALUES(id,idPersona,idRespuesta));
-//$conn -> query($queryRespuestas)
 
+header('Location: info.php?usuario='.$lastId);
+exit;
 
 ?>
