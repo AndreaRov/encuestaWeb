@@ -1,25 +1,27 @@
 var myArr;
+console.log("INICIO CARGA");
 
-var xhttp = new XMLHttpRequest();
-var url = "php/jsonString.php";
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  var url = "json.php";
 
-xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    myArr = JSON.parse(this.responseText);
-    myFunction();
-  }
-};
-xhttp.open("GET", url, true);
-xhttp.send();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myArr = JSON.parse(this.responseText);
+      myFunction();
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
 
-
+}
 
 function showMaterials() {
 
   var divMaterials = document.getElementById("id_materials");
   var getMaterials = document.getElementById("get_materials");
 
-  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12");
+  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 encuesta");
   divMaterials.setAttribute("onclick", "hideMaterials()");
 
 }
@@ -39,8 +41,8 @@ function showTransport() {
   var divMaterials = document.getElementById("id_transport");
   var getMaterials = document.getElementById("get_transport");
 
-  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12");
-  divMaterials.setAttribute("onclick", "hideMaterials()");
+  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 encuesta");
+  divMaterials.setAttribute("onclick", "hideTransport()");
 
 }
 
@@ -50,7 +52,7 @@ function hideTransport() {
   var getMaterials = document.getElementById("get_transport");
 
   getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 hidden");
-  divMaterials.setAttribute("onclick", "showMaterials()");
+  divMaterials.setAttribute("onclick", "showTransport()");
 
 }
 
@@ -59,8 +61,8 @@ function showEnergy() {
   var divMaterials = document.getElementById("id_energy");
   var getMaterials = document.getElementById("get_energy");
 
-  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12");
-  divMaterials.setAttribute("onclick", "hideMaterials()");
+  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 encuesta");
+  divMaterials.setAttribute("onclick", "hideEnergy()");
 
 }
 
@@ -70,7 +72,7 @@ function hideEnergy() {
   var getMaterials = document.getElementById("get_energy");
 
   getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 hidden");
-  divMaterials.setAttribute("onclick", "showMaterials()");
+  divMaterials.setAttribute("onclick", "showEnergy()");
 
 }
 
@@ -79,8 +81,8 @@ function showWater() {
   var divMaterials = document.getElementById("id_water");
   var getMaterials = document.getElementById("get_water");
 
-  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12");
-  divMaterials.setAttribute("onclick", "hideMaterials()");
+  getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 encuesta");
+  divMaterials.setAttribute("onclick", "hideWater()");
 
 }
 
@@ -90,7 +92,7 @@ function hideWater() {
   var getMaterials = document.getElementById("get_water");
 
   getMaterials.setAttribute("class", "col-xs-12 col-sm-6 col-md-3 col-lg-12 hidden");
-  divMaterials.setAttribute("onclick", "showMaterials()");
+  divMaterials.setAttribute("onclick", "showWater()");
 
 }
 
@@ -100,28 +102,28 @@ function myFunction() {
     var div = document.createElement("div");
     var element;
     for (j = 0; j < myArr.length; j++) {
-		
-      if (myArr[i].Categoria == "materiales" || myArr[i].Categoria == "Materiales"){
-		
+
+      if (myArr[i].Categoria == "materiales" || myArr[i].Categoria == "Materiales") {
+
         element = document.getElementById("get_materials");
 
-      } else if (myArr[i].Categoria == "transporte" || myArr[i].Categoria == "Transporte"){
-		
+      } else if (myArr[i].Categoria == "transporte" || myArr[i].Categoria == "Transporte") {
+
         element = document.getElementById("get_transport");
 
-      } else if (myArr[i].Categoria == "energia" || myArr[i].Categoria == "Energia"){
+      } else if (myArr[i].Categoria == "energia" || myArr[i].Categoria == "Energia") {
 
         element = document.getElementById("get_energy");
-		
-      } else if (myArr[i].Categoria == "agua" || myArr[i].Categoria == "Agua"){
-		  
+
+      } else if (myArr[i].Categoria == "agua" || myArr[i].Categoria == "Agua") {
+
         element = document.getElementById("get_water");
 
       }
     }
     element.appendChild(div);
     div.setAttribute("class", myArr[i].depende);
-    var parrafo = document.createElement("P");
+    var parrafo = document.createElement("h4");
     div.appendChild(parrafo);
     var node1 = document.createTextNode(myArr[i].pregunta);
     parrafo.appendChild(node1);
@@ -140,7 +142,6 @@ function myFunction() {
         optionRespuesta.appendChild(textoRespuesta);
       }
     } else if (myArr[i].Tipo == "range") {
-      //for (j = 0; j < arrRespuestas.length; j++){
       var labelInicial = document.createElement("label");
       div.appendChild(labelInicial);
       var textoRango1 = document.createTextNode(arrRespuestas[0].respuesta);
