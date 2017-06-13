@@ -2,7 +2,7 @@
     {
         "preguntaId": "3"
         , "enunciado": "¿Cuantas personas viven en tu hogar?"
-        , "categoria": "energia"
+        , "categoria": "no"
         , "tipo": "radio"
         , "respuestas": [
             {
